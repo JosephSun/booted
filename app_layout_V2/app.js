@@ -1,10 +1,9 @@
-// Defines module for app. If there are dependencies, insert into array
 var app = angular.module("booted", [])
     //sets up controller for list of bootcamps
     
     .controller('bootListController', function($scope, $http){
     
-    //Hardcoded dB Backup Bootcamp List Below - Use if Necessary For Demo.
+    //Hardcoded dB Backup Bootcamp List Below 
 	$scope.bootcampList = [
         {
 			url: './schools/hackreactor.html',
@@ -48,6 +47,6 @@ var app = angular.module("booted", [])
         var list = [];
         
         angular.forEach($scope.bootcampList, function(prop, val){
-            this.push(prop + ': ' + val)
+            this.push(prop + ': ' + val);
         }, list);
     });

@@ -23,7 +23,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.get('/mainComments', function(req, res) {
 	db.mainComments.find(function(err, docs) {
 		res.json(docs);
-	})
+	});
 });
 
 // Parses the body and creates a JSON object
@@ -32,7 +32,7 @@ app.post('/mainComments', jsonParser, function(req, res) {
 	db.mainComments.insert(svc, function(err, doc) {
 		res.json(doc);
 	}); //inserts data into the database
-})
+});
 
 // Retrieves a specific id from the database
 app.get('/mainComments/:id', function(req, res) {
@@ -48,8 +48,8 @@ app.delete('/mainComments/:id', function(req, res) {
 	console.log('hey', id);
 	db.mainComments.remove({_id: mongojs.ObjectId(id)}, function(err, doc) {
 		res.json(doc);
-	})
-})
+	});
+});
 
 app.listen(3000);
 app.listen(app.get('port'), function() {

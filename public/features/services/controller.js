@@ -42,6 +42,6 @@ angular.module('app').controller('bootcampCtrl', function($scope, $http) {
 		.success($scope.rendermainComments);
 	};
 
-	$scope.all(); //call this the first time when the page first loads
+	$scope.all(); 
 
 });

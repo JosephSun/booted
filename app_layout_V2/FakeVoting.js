@@ -5,18 +5,14 @@ myApp = angular.module("booted");
 
 myApp.factory('FakeVoting', function clientIdFactory() {
   return {
-    //love starts off as 0
     love: 0
   };
 });
    myApp.controller("FakeVotingNotWorthyCtrl", ['$rootScope','$scope','FakeVoting', fakeVotingFunc]);    
 
 function fakeVotingFunc($scope, FakeVoting) {
-  // $scope.vote
-  console.log("FakeVoting", FakeVoting.love)
   $scope.love = 0//FakeVoting.love
     $scope.addLove = function() {
-        //add love
         $FakeVoting.love++; 
         $scope.love++;
 

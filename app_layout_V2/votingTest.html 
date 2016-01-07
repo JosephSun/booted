@@ -34,9 +34,7 @@
            <a href="#" class="account" ng-click="active='account'">Account</a>
        </nav>
 
-       <!-- ng-show will show an element if the value in the quotes is truthful,
-         & ng-hide does the opposite. If active variable is not set
-         initially, first paragraph will display. -->
+
        <p ng-hide="active">scan it, buy it...done</p>
        <p ng-show="active">Wanna Buy It? <em></em></p>
         <!-- Insert top returned li results between emphasis<em> tags maybe? -->  
@@ -62,7 +60,6 @@
          -->
         <li ng-repeat="i in items | searchFor:searchString">
             <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
-            <!-- paragraph below should display title of item w/pic & url-->
             <p>{{i.title}}</p>
         </li>
     </ul>
